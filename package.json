@@ -1,6 +1,6 @@
 {
   "name": "mongo-mask",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Convert a json-mask pattern to a mongodb projection",
   "main": "index.js",
   "scripts": {
