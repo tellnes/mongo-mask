@@ -1,0 +1,37 @@
+{
+  "name": "mongo-mask",
+  "version": "0.0.0",
+  "description": "Convert a json-mask pattern to a mongodb projection",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test/test.js",
+    "coverage": "istanbul cover test/test.js",
+    "coveralls": "npm run coverage && cat ./coverage/lcov.info | coveralls --verbose"
+  },
+  "keywords": [
+    "json-mask",
+    "mask",
+    "mongo",
+    "mongodb"
+  ],
+  "author": "Christian Tellnes <christian@tellnes.no> (http://christian.tellnes.com/)",
+  "license": "MIT",
+  "dependencies": {
+    "json-mask": "^0.3.5"
+  },
+  "devDependencies": {
+    "coveralls": "^2.11.9",
+    "istanbul": "^0.4.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tellnes/mongo-mask.git"
+  },
+  "bugs": {
+    "url": "https://github.com/tellnes/mongo-mask/issues"
+  },
+  "homepage": "https://github.com/tellnes/mongo-mask#readme",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org"
+  }
+}
