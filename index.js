@@ -13,7 +13,7 @@ function walk(obj, mapping, path, mask) {
     const comb = path + key
     if (key === '*')
       set(obj, path.slice(0, -1))
-    else if (mapping[comb])
+    else if (comb in mapping)
       map(obj, mapping, comb)
     else if (mask[key].properties)
       walk(obj, mapping, comb + '.', mask[key].properties)
@@ -24,6 +24,8 @@ function walk(obj, mapping, path, mask) {
 }
 
 function map(obj, mapping, path) {
+  if (!mapping[path]) return
+
   if (Array.isArray(mapping[path]))
     mapping[path].forEach((pa) => set(obj, pa))
   else

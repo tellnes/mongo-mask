@@ -28,6 +28,11 @@ test( jsonMask.compile('foo')
     )
 
 
+test( 'foo,bar'
+    , { bar: true }
+    , { map: { foo: false } }
+    )
+
 function test(pattern, result, options) {
   assert.deepEqual(mm(pattern, options), result, pattern)
 }
