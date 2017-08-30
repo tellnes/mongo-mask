@@ -28,6 +28,8 @@ function map(obj, mapping, path) {
 
   if (Array.isArray(mapping[path]))
     mapping[path].forEach((pa) => set(obj, pa))
+  else if (mapping[path] === true)
+    set(obj, path)
   else
     set(obj, mapping[path])
 }

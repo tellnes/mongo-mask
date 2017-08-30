@@ -33,6 +33,18 @@ test( 'foo,bar'
     , { map: { foo: false } }
     )
 
+test( 'foo(id,name)'
+    , { 'foo': true }
+    , { map: { foo: 'foo' } }
+    )
+
+test( 'foo(id,name)'
+    , { 'foo': true }
+    , { map: { foo: true } }
+    )
+
+
+
 function test(pattern, result, options) {
   assert.deepEqual(mm(pattern, options), result, pattern)
 }
